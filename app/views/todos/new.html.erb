@@ -1,0 +1,14 @@
+<h1>Nuevo deber</h1>
+
+<ul class="nav nav-tabs" role="tablist">
+  <li><%= link_to 'Ver lista', todos_path %></li>
+  <li class="active"><%= link_to 'Nuevo deber', new_todo_path %></li>
+</ul>
+
+<h1>Nuevo deber</h1>
+
+<%= render 'form' %>
+
+<%= link_to todos_path, class: 'btn btn-danger btn-lg' do %>
+<i class="glyphicon glyphicon-repeat"></i> Regresar 
+<% end %>

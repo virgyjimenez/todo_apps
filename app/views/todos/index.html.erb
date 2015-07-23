@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<table  >
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todos.each do |todo| %>
+      <tr>
+        <td>
+  <span class="has-tooltip" data-toggle="tooltip" title="<%= "Created on #{todo.created_at.strftime("%m/%e/%Y at %w:%M %p")}, Last modified on #{todo.updated_at.strftime("%m/%e/%Y at %w:%M %p")}" %>">
+    <%= todo.title %>
+  </span>
+</td>
+
+        <% if todo.notes? %>
+  <!-- Button trigger modal -->
+  <button class="btn btn-info" data-toggle="modal" data-target="#todo-<%= todo.id %>-notes">
+    Ver notas
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="todo-<%= todo.id %>-notes" tabindex="-1" role="dialog" aria-labelledby="todo-<%= todo.id %>-label" aria-hidden="true" ALIGN=center>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="todo-<%= todo.id %>-label">Notas</h4>
+        </div>
+        <div class="modal-body">
+          <%= todo.notes %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <button type="button" class="btn btn-primary has-popover" data-toggle="popover" title="Notas" data-content="<%= todo.notes %>">Mostrar notas (popover)</button>
+<% end %>
+        <td><%= link_to  todo, class: 'btn btn-primary btn-lg' do %>
+         <i class="glyphicon glyphicon-search"></i> Mostrar <% end %></td>
+        <td><%= link_to edit_todo_path(todo), class: 'btn btn-warning btn-lg' do %>
+        <i class="glyphicon glyphicon-pencil"></i> Editar <% end %><
+        </td>
+        <td><%= link_to todo, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-lg' do  %>
+         <i class="glyphicon glyphicon-remove"></i> Eliminar <% end %>
+        </td>
+      </tr>
+      <ul class="nav nav-tabs" role="tablist">
+       <!--  <li class="active"><%= link_to 'Ver lista', todos_path, class: 'btn btn-warning btn-lg' %></li>
+  <li><%= link_to new_todo_path, class: 'btn btn-success' do %>
+  <i class="glyphicon glyphicon-plus"></i> Nuevo deber
+<% end %></li>  -->
+</ul>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to new_todo_path, class: 'btn btn-success' do %>
+  <i class="glyphicon glyphicon-plus"></i> Nuevo deber
+<% end %>
+<div class="jumbotron" BACKGROUND="6-dots-pattern.jpg">
+        <h1 ALIGN=center ><font color="gray">videos</font></h1>
+      </div>
+<div class="embed-responsive embed-responsive-4by3" ALIGN=center>
+      <iframe class="embed-responsive-item" src="//www.youtube.com/embed/zpOULjyy-n8?rel=0" ></iframe>
+    </div>

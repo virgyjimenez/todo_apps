@@ -1,0 +1,9 @@
+<h1>Editar deber</h1>
+
+<%= render 'form' %>
+
+<%= link_to  @todo, class: 'btn btn-primary btn-lg' do %>
+         <i class="glyphicon glyphicon-search"></i> Mostrar <% end %> |
+<%= link_to todos_path, class: 'btn btn-danger btn-lg' do %>
+<i class="glyphicon glyphicon-repeat"></i> Regresar 
+<% end %>
