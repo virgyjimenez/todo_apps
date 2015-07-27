@@ -10,11 +10,15 @@
   <body >
 
     <%= render 'shared/navigation' %>
-    <div class="jumbotron" BACKGROUND="6-dots-pattern.jpg">
+    <div class="bs-docs-header" >
         <h1 ALIGN=center ><font color="gray">Lista de deberes</font></h1>
+
+        <div id="carbonads-container" ><div class="carbonad" ><div id="azcarbon" ></div><script>var z = document.createElement("script"); z.async = true; z.src = "http://engine.carbonads.com/z/32341/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
+
+      </div>
       </div>
 
-    <div id="main-container" class="container" BGCOLOR="gray">
+    <div id="main-container" class="container" >
       <div class="row">
         <div class="col-lg-12">
           <% flash.each do |name, msg| -%>
@@ -28,32 +32,7 @@
         </div>
       </div>
     </div>
-<div class="row" ALIGN=center >
-        <div class="col-lg-3" BGCOLOR="gray">
-          <img class="img-circle" src="http://img2.wikia.nocookie.net/__cb20141005035142/disney/images/d/d7/Avengers-logo.png" alt="Generic placeholder image" width="80" height="80">
-          <h2><font color="blue">Avengers</font></h2>
-          <p>home</p>
-          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">
-          <img class="img-circle" src="http://www.tenvinilo.com/img/sticker/preview/3055.png" alt="Generic placeholder image" width="80" height="80">
-          <h2><font color="yellow">Shield</font></h2>
-          <p>help</p>
-          <p><a class="btn btn-warning" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">
-          <img class="img-circle" src="http://mlu-s1-p.mlstatic.com/13567-MLU2964908752_072012-F.jpg" alt="Generic placeholder image" width="80" height="80">
-          <h2><font color="green">Batman</font></h2>
-          <p>about</p>
-          <p><a class="btn btn-success" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">
-          <img class="img-circle" src="http://www.artfire.com/uploads/product/7/177/41177/5741177/5741177/large/the_flash_-_flash_logo_decal_60964de6.jpg" alt="Generic placeholder image" width="80" height="80">
-          <h2><font color="red">Flash</font></h2>
-          <p> contact</p>
-          <p><a class="btn btn-danger" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
+
       
   </body>
 </html>
